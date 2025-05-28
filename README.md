@@ -1,0 +1,2 @@
+# Boothly
+Photobooth Web App
