@@ -371,7 +371,7 @@
         <div class="camera-section">
             <h1 class="section-title">
                 <i class="fas fa-camera"></i>
-                Modern Photobooth
+                Boothly
             </h1>
             
             <div class="camera-container">
