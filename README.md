@@ -1,4 +1,4 @@
-# Modern Photobooth Web App
+# Boothly
 
 A beautiful, modern photobooth web application built with Laravel that allows users to capture multiple photos with customizable timer settings and create Instax-style collages for download.
 
