@@ -15,7 +15,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #8E44FF 0%, #6A82FB 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -24,15 +24,16 @@
         }
 
         .photobooth-container {
-            background: white;
+            background: #F9F9FF;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(26, 26, 26, 0.15);
             overflow: hidden;
             max-width: 1200px;
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 400px;
             min-height: 700px;
+            border: 2px solid rgba(142, 68, 255, 0.1);
         }
 
         .camera-section {
@@ -40,7 +41,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #f8f9fa;
+            background: #F9F9FF;
         }
 
         .camera-container {
@@ -48,10 +49,11 @@
             width: 100%;
             max-width: 600px;
             aspect-ratio: 4/3;
-            background: #000;
+            background: #1A1A1A;
             border-radius: 15px;
             overflow: hidden;
             margin-bottom: 20px;
+            border: 3px solid #8E44FF;
         }
 
         #video {
@@ -70,14 +72,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.8);
+            background: rgba(26, 26, 26, 0.9);
             display: none;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: #8E44FF;
             font-size: 120px;
             font-weight: bold;
             z-index: 10;
+            text-shadow: 0 0 20px rgba(142, 68, 255, 0.5);
         }
 
         .controls-section {
@@ -91,25 +94,34 @@
         .section-title {
             font-size: 24px;
             font-weight: bold;
-            color: #333;
+            color: #1A1A1A;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
+        .section-title i {
+            color: #8E44FF;
+        }
+
         .control-group {
-            background: #f8f9fa;
+            background: #F9F9FF;
             padding: 20px;
             border-radius: 12px;
-            border: 2px solid #e9ecef;
+            border: 2px solid rgba(142, 68, 255, 0.1);
         }
 
         .control-label {
             font-weight: 600;
-            color: #495057;
+            color: #1A1A1A;
             margin-bottom: 10px;
             display: block;
+        }
+
+        .control-label i {
+            color: #8E44FF;
+            margin-right: 8px;
         }
 
         .photo-count-selector {
@@ -120,24 +132,27 @@
 
         .count-option {
             padding: 15px;
-            border: 2px solid #dee2e6;
+            border: 2px solid rgba(106, 130, 251, 0.3);
             border-radius: 8px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
             background: white;
             font-weight: 600;
+            color: #1A1A1A;
         }
 
         .count-option:hover {
-            border-color: #667eea;
-            background: #f8f9ff;
+            border-color: #6A82FB;
+            background: rgba(106, 130, 251, 0.1);
+            transform: translateY(-2px);
         }
 
         .count-option.active {
-            border-color: #667eea;
-            background: #667eea;
+            border-color: #8E44FF;
+            background: #8E44FF;
             color: white;
+            box-shadow: 0 5px 15px rgba(142, 68, 255, 0.3);
         }
 
         .timer-controls {
@@ -149,18 +164,21 @@
         .timer-input {
             flex: 1;
             padding: 12px;
-            border: 2px solid #dee2e6;
+            border: 2px solid rgba(106, 130, 251, 0.3);
             border-radius: 8px;
             font-size: 16px;
+            background: white;
+            color: #1A1A1A;
         }
 
         .timer-input:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #8E44FF;
+            box-shadow: 0 0 0 3px rgba(142, 68, 255, 0.1);
         }
 
         .capture-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #B657FF 0%, #8E44FF 100%);
             color: white;
             border: none;
             padding: 20px 40px;
@@ -174,17 +192,20 @@
             gap: 10px;
             width: 100%;
             justify-content: center;
+            box-shadow: 0 8px 25px rgba(182, 87, 255, 0.3);
         }
 
         .capture-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(182, 87, 255, 0.4);
+            background: linear-gradient(135deg, #8E44FF 0%, #B657FF 100%);
         }
 
         .capture-btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none;
+            box-shadow: 0 8px 25px rgba(182, 87, 255, 0.2);
         }
 
         .photos-grid {
@@ -196,13 +217,13 @@
 
         .photo-preview {
             aspect-ratio: 3/4;
-            background: #f8f9fa;
-            border: 2px dashed #dee2e6;
+            background: #F9F9FF;
+            border: 2px dashed rgba(106, 130, 251, 0.4);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #6c757d;
+            color: #6A82FB;
             position: relative;
             overflow: hidden;
         }
@@ -217,7 +238,7 @@
             position: absolute;
             top: 5px;
             right: 5px;
-            background: rgba(0,0,0,0.7);
+            background: rgba(26, 26, 26, 0.8);
             color: white;
             padding: 2px 6px;
             border-radius: 4px;
@@ -227,7 +248,7 @@
         .progress-bar {
             width: 100%;
             height: 6px;
-            background: #e9ecef;
+            background: rgba(106, 130, 251, 0.2);
             border-radius: 3px;
             overflow: hidden;
             margin-top: 10px;
@@ -235,7 +256,7 @@
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #8E44FF, #B657FF);
             width: 0%;
             transition: width 0.3s ease;
         }
@@ -257,18 +278,30 @@
         }
 
         .btn-secondary {
-            background: #6c757d;
+            background: #6A82FB;
             color: white;
+            border: 2px solid #6A82FB;
+        }
+
+        .btn-secondary:hover {
+            background: #8E44FF;
+            border-color: #8E44FF;
         }
 
         .btn-success {
-            background: #28a745;
+            background: #B657FF;
             color: white;
+            border: 2px solid #B657FF;
+        }
+
+        .btn-success:hover {
+            background: #8E44FF;
+            border-color: #8E44FF;
         }
 
         .btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(142, 68, 255, 0.3);
         }
 
         .status-message {
@@ -280,15 +313,15 @@
         }
 
         .status-success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
+            background: rgba(182, 87, 255, 0.1);
+            color: #8E44FF;
+            border: 2px solid rgba(182, 87, 255, 0.3);
         }
 
         .status-error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
+            background: rgba(255, 87, 87, 0.1);
+            color: #ff5757;
+            border: 2px solid rgba(255, 87, 87, 0.3);
         }
 
         .camera-controls {
@@ -300,8 +333,8 @@
         }
 
         .camera-switch-btn {
-            background: rgba(0,0,0,0.5);
-            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(26, 26, 26, 0.6);
+            border: 2px solid rgba(142, 68, 255, 0.5);
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -309,14 +342,16 @@
             align-items: center;
             justify-content: center;
             font-size: 16px;
-            color: white;
+            color: #8E44FF;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .camera-switch-btn:hover {
-            background: rgba(0,0,0,0.7);
-            border-color: rgba(255,255,255,0.5);
+            background: rgba(26, 26, 26, 0.8);
+            border-color: #B657FF;
+            color: #B657FF;
+            box-shadow: 0 0 15px rgba(142, 68, 255, 0.3);
         }
 
         @media (max-width: 768px) {
